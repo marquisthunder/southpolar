@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="database">
+		<xs:complexType>
+			<!--very importtant: attribute must be written after sequence,choice-->
+		<xs:sequence>
+				<xs:element name="order">
+					<xs:complexType>
+						
+						<xs:sequence>
+							<!--the primary key of the table-->
+							<xs:element name="id"> 
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="column">
+											<xs:complexType>
+												<xs:attribute name="name"/>
+											</xs:complexType>	
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="type"/>
+									<xs:attribute name="name"/>
+								</xs:complexType>
+							</xs:element>
+							<!--the element : mapping-->
+							<xs:element name="mapping">
+								<xs:complexType>
+									
+									<xs:choice>
+										<!-- element:"many-to-many"-->
+										<xs:element name="many-to-many"> 
+											<xs:complexType>
+												
+												<xs:sequence>
+												<xs:element name="order_id">
+													<xs:complexType>
+														<xs:attribute name="name"/>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="goods_id">
+													<xs:complexType>
+														<xs:attribute name="name"/>
+													</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="column"/>	
+											</xs:complexType>
+										</xs:element>
+										
+										<!-- element:"many-to-many"-->	
+										<xs:element name="one-to-many">
+										  <xs:complexType>
+												
+												<!-- "singleColumn" and "mutilColumns", only one of them could occur  -->
+												<xs:choice>
+													<!--singleColumn-->
+													<xs:element name="singleColumn"> 
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="separator">
+																	<xs:complexType>
+																		<xs:attribute name="value"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="goods_list">
+																	<xs:complexType>
+																		<xs:attribute name="name"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>	
+													</xs:element>
+											
+													<!--mutilColumns-->
+													<xs:element name="mutilColumns"> 
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="columnCount">
+																	<xs:complexType>
+																		<xs:attribute name="value"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="prefix">
+																	<xs:complexType>
+																		<xs:attribute name="value"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="startid">
+																	<xs:complexType>
+																		<xs:attribute name="value"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>	
+														</xs:complexType>
+													</xs:element>
+
+												</xs:choice>		<!--end of "singleColumn" and "mutilColumns"-->
+												<xs:attribute name="column"/>
+											</xs:complexType>								
+										</xs:element><!--end of "one-to-many"-->
+						     </xs:choice><!--end of "manymany" and "onemany"-->
+						     <!-- type of mapping -->
+									<xs:attribute name="type"/>
+									<!--corresponding table -->
+									<xs:attribute name="table"/>
+									<!-- "many-to-many" and "one-to-many", only one of them could occur  -->
+					      </xs:complexType>
+				      </xs:element><!--end of "mapping"-->
+			      </xs:sequence>
+			      <!--the referenced table name-->
+						<xs:attribute name="ref" />
+					</xs:complexType>
+				</xs:element><!--end of "order"-->
+				
+		</xs:sequence>
+			
+			<!--the name of specific database, required --> 
+			<xs:attribute name="name" default="ecshop"/>
+
+			<!--the type of the database, non-required -->
+			<xs:attribute name="type" default="mysql"/>
+			
+			<!--the driverClass of the database, required -->
+			<xs:attribute name="driverClass" default="com.mysql.jdbc.Driver"/>
+			
+			<!--the url of the database, required -->
+			<xs:attribute name="jdbcUrl" />
+		
+			<!--the username of the database, required -->
+			<xs:attribute name="user"/>
+			
+			<!--the username of the database, required -->
+			<xs:attribute name="password"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

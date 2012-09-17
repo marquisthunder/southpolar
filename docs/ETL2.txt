@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<database name="ecshop" type="mysql" driverClass="com.mysql.jdbc.Driver"
+	jdbcUrl="jdbc:mysql://localhost:3306/ecshop2?useUnicode=true&amp;characterEncoding=UTF-8"
+	user="root" password="">
+
+	<order ref="ecs_order">
+		<id name="id" type="integer">
+			<column name="order_id" />
+		</id>
+
+		
+		<mapping type="relation2" table="ecs_order">
+			<one-to-many column="order_id">
+				<mutilColumns>
+					<columnCount value="5"></columnCount>
+					<prefix value="goods_id"></prefix>
+					<startid value="1"></startid>
+				</mutilColumns>
+			</one-to-many>
+		</mapping>
+
+	</order>
+
+</database>

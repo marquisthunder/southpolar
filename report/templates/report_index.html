@@ -1,0 +1,41 @@
+<div class="container_12">
+  <div id="content">
+    <div class="form">
+      <h1>Login htmlpage</h1>
+      <form name="loginForm">
+        <div class="control-group" ng-class="{error: loginForm.username.$invalid}">
+          <label>Name</label>
+          <input type="text" name="username" ng-model="member.username" required>
+          <span ng-show="loginForm.username.$error.required" class="help-inline">
+            Required</span>
+        </div>
+
+        <div class="control-group" ng-class="{error: loginForm.password.$invalid}">
+          <label>Password</label>
+          <input type="password" name="password" ng-model="member.password" required>
+          <span ng-show="loginForm.password.$error.required" class="help-inline">
+            Required</span>
+        </div>
+
+        <div class="control-group" ng-class="{error: loginForm.type.$invalid}">
+          <select ui-select2 ng-model="member.type" required>
+            <option value="">Pick a number</option>
+            <option value="site">Site</option>
+            <option value="enterprise">Enterprise</option>
+            <option value="organization">Organization</option>
+          </select>
+          <span ng-show="loginForm.type.$error.required" class="help-inline">
+            Required</span>
+        </div>
+
+        <br></br>
+        <a href="" class="btn">Cancel</a>
+        <button ng-click="login()" ng-disabled="isClean() || loginForm.$invalid"
+          ui-jq="button">Login</button>
+        <button ng-click="$log.warn(member.username)" ng-disabled="isClean() || loginForm.$invalid"
+          class="btn btn-primary">Test</button>
+      </form>
+
+    </div>
+  </div>
+</div>
