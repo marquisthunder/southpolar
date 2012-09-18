@@ -17,4 +17,4 @@ class Member(models.Model):
     objects = MemberManager()
 
     def __unicode__(self):
-        return "KaasMember:%s, Gourp:%s" % (self.user.username, self.group)
+        return "Member:%s, Gourp:%s" % (self.user.username, self.group)

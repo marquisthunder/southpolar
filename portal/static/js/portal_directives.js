@@ -2,7 +2,7 @@
 (function() {
   "use strict";
 
-  angular.module('kass.directives', []).directive('validpasssword', {
+  angular.module('southpolar.directives', []).directive('validpasssword', {
     require: 'ngModel',
     link: function(scope, elm, attrs, ctrl) {
       return ctrl.$parsers.unshift(function(viewValue) {

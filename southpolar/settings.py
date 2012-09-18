@@ -1,5 +1,3 @@
-# Django settings for kaasfront project.
-
 import os,sys
 
 DEBUG = True
@@ -183,7 +181,7 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
-        'kaasportal': {
+        'portal': {
             'handlers': ['console'],
             'level': 'INFO',
         },

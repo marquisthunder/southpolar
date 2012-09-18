@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ad21afe-1cbd-48e3-99c7-9c18485893e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/southpolar.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/testrunner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/static/js/kaas.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/static/js/kaas.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/static/js/services.js" afterPath="$PROJECT_DIR$/common/static/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/templates/base.html" afterPath="$PROJECT_DIR$/common/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/templates/head.html" afterPath="$PROJECT_DIR$/common/templates/head.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/models.py" afterPath="$PROJECT_DIR$/member/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/static/js/portal_controllers.js" afterPath="$PROJECT_DIR$/portal/static/js/portal_controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/static/js/portal_directives.js" afterPath="$PROJECT_DIR$/portal/static/js/portal_directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/templates/index.html" afterPath="$PROJECT_DIR$/portal/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/models.py" afterPath="$PROJECT_DIR$/report/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serviceconf/models.py" afterPath="$PROJECT_DIR$/serviceconf/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/southpolar/settings.py" afterPath="$PROJECT_DIR$/southpolar/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/southpolar/wsgi.py" afterPath="$PROJECT_DIR$/southpolar/wsgi.py" />
     </list>
     <ignored path="southpolar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +35,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="kaas.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/static/js/kaas.coffee">
+      <file leaf-file-name="portal_controllers.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portal/static/js/portal_controllers.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+            <state line="1" column="52" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/static/js/services.coffee">
+      <file leaf-file-name="portal_directives.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/portal/static/js/portal_directives.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.18836565">
               <folding />
             </state>
           </provider>
@@ -58,19 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portal_controllers.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portal/static/js/portal_controllers.coffee">
+      <file leaf-file-name="services.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/static/js/services.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="52" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="portal_directives.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/portal/static/js/portal_directives.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.18836565">
+            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -303,10 +298,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.fileTypes" />
-    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -441,6 +436,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="3ad21afe-1cbd-48e3-99c7-9c18485893e4" name="Default" comment="" />
       <created>1347870217293</created>
       <updated>1347870217293</updated>
     </task>
@@ -448,25 +444,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964029" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25395682" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -524,96 +520,57 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/report/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report/resource.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="148" selection-end="148" vertical-scroll-proportion="0.09418283">
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="4" column="12" selection-start="148" selection-end="148" vertical-scroll-proportion="0.09418283" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="102" selection-end="102" vertical-scroll-proportion="0.119887166">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="5" column="10" selection-start="102" selection-end="102" vertical-scroll-proportion="0.119887166" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portal/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.047091413">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.047091413" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portal/resource.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="3193" selection-end="3193" vertical-scroll-proportion="0.10526316">
-          <folding />
-        </state>
+        <state line="79" column="0" selection-start="3193" selection-end="3193" vertical-scroll-proportion="0.10526316" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.047091413">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.047091413" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/resource.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="0" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/member/resource.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="27" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/member/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="7" column="16" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/southpolar/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.5593705">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/static/js/kaas.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="23" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.5593705" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/static/js/services.coffee">

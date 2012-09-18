@@ -37,4 +37,3 @@ southpolar.value "ui.config",
     jq:
         accordion:
             header: "h3"
-

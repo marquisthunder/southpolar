@@ -1,13 +1,33 @@
 ((members))
-    <ul>
-        <li ng-repeat="member in members.objects">
-        ((member.group))
-        </li>
-    </ul>
+<ul>
+  <li ng-repeat="member in members.objects">
+  ((member.group))
+  </li>
+</ul>
+<div class="container">
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+    <h1>这里是动态监控图表</h1>
+    <p>This is a template for d3.js data view.</p>
+    <p><a class="btn btn-primary btn-large">Learn more»</a></p>
+  </div>
 
-<select ui-select2 ng-model="select2">
-    <option value="">Pick a number</option>
-    <option value="one">First</option>
-    <option value="two">Second</option>
-    <option value="three">Third</option>
-</select>
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="span4">
+      <h2>这里是风电模块</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a href="#" class="btn">View details »</a></p>
+    </div>
+    <div class="span4">
+      <h2>这里是太阳能模块</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a href="#" class="btn">View details »</a></p>
+    </div>
+    <div class="span4">
+      <h2>这里是电池组模块</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a href="#" class="btn">View details »</a></p>
+    </div>
+  </div>
+</div>

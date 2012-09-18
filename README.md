@@ -1,4 +1,4 @@
-create database kaasfront
+create database southpolar
 ./manage.py syncdb
 ./manage.py runserver
 
