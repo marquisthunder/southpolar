@@ -2,7 +2,7 @@
 (function() {
   var southpolar;
 
-  southpolar = angular.module("southpolar", ["ngResource", "ngCookies", "ui", "southpolar.services", "southpolar.controllers"]);
+  southpolar = angular.module("southpolar", ["ngResource", "ngCookies", "ui", "portal.services", "portal.controllers", "turbine.services", "turbine.controllers"]);
 
   southpolar.config([
     "$interpolateProvider", "$routeProvider", function($interpolateProvider, $routeProvider) {

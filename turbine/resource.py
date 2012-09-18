@@ -15,11 +15,11 @@ class TurbineResource(ModelResource):
 
 
 class TurbineDataResource(ModelResource):
-    turbine = fields.ForeignKey(TurbineResource, 'user')
+    turbine = fields.ForeignKey(TurbineResource, 'turbine')
 
     class Meta:
         queryset = TurbineData.objects.all()
-        resource_name = "turbine"
+        resource_name = "turbinedata"
         authentication = ApiKeyAuthentication()
         allowed_methods = ['get']
 

@@ -8,18 +8,15 @@ class TurbineParameter(models.Model):
     kd = models.IntegerField(verbose_name=u'KD')
 
     def __unicode__(self):
-        return u'[Turbine Parameter:%s]' % (self.kp, self.ki, self.kd)
+        return u'[Turbine Parameter:%d, %d, %d]' % (self.kp, self.ki, self.kd)
 
 
 class Turbine(models.Model):
     name = models.CharField(max_length=30, verbose_name='TurbineName')
-    producer = models.CharField(max_length=30, verbose_name='TurbineName')
+    producer = models.CharField(max_length=30, verbose_name='Producer')
     ratedpower = models.IntegerField(verbose_name='Rated Power')
     parameter = models.ForeignKey(TurbineParameter, verbose_name='Parameter')
     date_installed = models.DateTimeField('date installed', default=datetime.datetime.now)
-
-    class Meta:
-        verbose_name = 'Turbine'
 
     def __unicode__(self):
         return u'[Turbine:%s]' % self.name
@@ -45,3 +42,7 @@ class TurbineData(models.Model):
     currentpower = models.IntegerField(default=0)
     alarminfo = models.OneToOneField(TurbineAlarm, verbose_name='Alarm')
     state = models.OneToOneField(TurbineState, verbose_name='State')
+    currentdate = models.DateTimeField('date inserted', default=datetime.datetime.now)
+
+    def __unicode__(self):
+        return u'[Turbine Power:%d]' % self.currentpower
