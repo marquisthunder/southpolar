@@ -1,5 +1,5 @@
 "use strict"
-angular.module('southpolar.controllers', ['southpolar.services'])
+angular.module('portal.controllers', ['portal.services'])
 .controller("MembersControl", [
     '$scope', 'Members', "$cookieStore"
 
@@ -9,7 +9,6 @@ angular.module('southpolar.controllers', ['southpolar.services'])
             api_key: $cookieStore.get('apikey')
         )
         #console.log($scope.members);
-        $scope.select2 = "three"
 ])
 
 .controller("MemberDetailControl", [
@@ -22,7 +21,7 @@ angular.module('southpolar.controllers', ['southpolar.services'])
             api_key:  $cookieStore.get('apikey')
         , (member) ->
         )
-        $scope.member
+        return
 ])
 
 .controller("LoginControl", [

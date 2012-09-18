@@ -1,5 +1,4 @@
 from tastypie.authentication import Authentication
-#from tastypie.authorization import Authorization
 from django.contrib.auth import authenticate, login as auth_login
 from tastypie.models import ApiKey
 import json

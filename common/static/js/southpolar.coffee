@@ -1,12 +1,15 @@
-southpolar = angular.module("southpolar", ["ngResource", "ngCookies", "ui", "southpolar.services", "southpolar.controllers"])
+southpolar = angular.module("southpolar",
+    ["ngResource", "ngCookies", "ui", "portal.services", "portal.controllers",
+    "turbine.services", 'turbine.controllers'])
 southpolar.config [
-    "$interpolateProvider", "$routeProvider"
+    "$interpolateProvider", "$routeProvider", "$log"
 
-    ($interpolateProvider, $routeProvider) ->
+    ($interpolateProvider, $routeProvider, $log) ->
         #change angular template tags
         $interpolateProvider.startSymbol "(("
         $interpolateProvider.endSymbol "))"
         
+        $log.warn MembersControl
         #routes & multi-views
         $routeProvider.when("/",
             templateUrl: "/members/"
@@ -25,10 +28,10 @@ southpolar.config [
             controller: "RegisterControl"
         ).when("/turbines",
             templateUrl: "/turbine/"
-            #controller: "TurbineDetailControl"
+            controller: "TurbinesControl"
         ).when("/turbine/:turbineid",
             templateUrl: "/turbine/get/"
-            #controller: "TurbineDetailControl"
+            controller: "TurbineDetailControl"
         ).when("/solarcells",
             templateUrl: "/solarcell/"
             #controller: "SolarcellDetailControl"

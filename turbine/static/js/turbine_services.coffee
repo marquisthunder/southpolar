@@ -1,7 +1,7 @@
-angular.module('southpolar.services', [])
+angular.module('turbine.services', [])
 #register RESTful services
-.factory "Members", ($resource) ->
-    $resource "/api/members/member/:memberId",
+.factory "Turbines", ($resource) ->
+    $resource "/api/turbines//:memberId",
         format: "json"
     ,
         query:

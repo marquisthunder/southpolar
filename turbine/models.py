@@ -2,11 +2,20 @@ from django.db import models
 import datetime
 
 
+class TurbineParameter(models.Model):
+    kp = models.IntegerField(verbose_name=u'KP')
+    ki = models.IntegerField(verbose_name=u'KI')
+    kd = models.IntegerField(verbose_name=u'KD')
+
+    def __unicode__(self):
+        return u'[Turbine Parameter:%s]' % (self.kp, self.ki, self.kd)
+
+
 class Turbine(models.Model):
     name = models.CharField(max_length=30, verbose_name='TurbineName')
     producer = models.CharField(max_length=30, verbose_name='TurbineName')
     ratedpower = models.IntegerField(verbose_name='Rated Power')
-    parameter = models.ForeignKey(TurbineState, verbose_name='Parameter')
+    parameter = models.ForeignKey(TurbineParameter, verbose_name='Parameter')
     date_installed = models.DateTimeField('date installed', default=datetime.datetime.now)
 
     class Meta:
@@ -21,15 +30,6 @@ class TurbineAlarm(models.Model):
 
     def __unicode__(self):
         return u'[Turbine Alarm:%s]' % self.type
-
-
-class TurbineParameter(models.Model):
-    kp = models.IntegerField(verbose_name=u'KP')
-    ki = models.IntegerField(verbose_name=u'KI')
-    kd = models.IntegerField(verbose_name=u'KD')
-
-    def __unicode__(self):
-        return u'[Turbine Parameter:%s]' % (self.kp, self.ki, self.kd)
 
 
 class TurbineState(models.Model):

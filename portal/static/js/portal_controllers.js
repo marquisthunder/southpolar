@@ -2,13 +2,12 @@
 (function() {
   "use strict";
 
-  angular.module('southpolar.controllers', ['southpolar.services']).controller("MembersControl", [
+  angular.module('portal.controllers', ['portal.services']).controller("MembersControl", [
     '$scope', 'Members', "$cookieStore", function($scope, Members, $cookieStore) {
-      $scope.members = Members.query({
+      return $scope.members = Members.query({
         username: $cookieStore.get('username'),
         api_key: $cookieStore.get('apikey')
       });
-      return $scope.select2 = "three";
     }
   ]).controller("MemberDetailControl", [
     "$scope", "$routeParams", "Members", "$cookieStore", function($scope, $routeParams, Members, $cookieStore) {
@@ -17,7 +16,6 @@
         username: $cookieStore.get('username'),
         api_key: $cookieStore.get('apikey')
       }, function(member) {});
-      return $scope.member;
     }
   ]).controller("LoginControl", [
     "$scope", "$location", "Login", "$cookieStore", "$log", function($scope, $location, Login, $cookieStore, $log) {
