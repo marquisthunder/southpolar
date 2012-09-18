@@ -1,3 +1,3 @@
-from django.db import models
-
-# Create your models here.
+def enum(*sequential, **named):
+    enums = dict(zip(sequential, range(len(sequential))), **named)
+    return type('Enum', (), enums)
