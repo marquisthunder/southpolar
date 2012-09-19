@@ -2,20 +2,26 @@ from tastypie.resources import ModelResource
 from tastypie import fields
 from tastypie.authentication import ApiKeyAuthentication
 from turbine.models import Turbine, TurbineData
+#from datetime import datetime, timedelta
 
 
 class TurbineResource(ModelResource):
+    '''
+    def gettimefilter(self):
+        curtime = datatime.now()
+        return TurbineDataResource.objects.filter(currenttime__lt=curtime - timedelta(hours=1))
+    '''
 
     class Meta:
         queryset = Turbine.objects.all()
-        resource_name = 'profile'
+        resource_name = 'turbine'
         authentication = ApiKeyAuthentication()
-        fields = ['name', 'type', 'date_installed']
+        #fields = ['name', 'producer', 'parameter', 'date_installed']
         allowed_methods = ['get']
 
 
 class TurbineDataResource(ModelResource):
-    turbine = fields.ForeignKey(TurbineResource, 'turbine')
+    info = fields.ToOneField(TurbineResource, attribute='info', related_name='turbine', full=True, null=True)
 
     class Meta:
         queryset = TurbineData.objects.all()
@@ -24,5 +30,5 @@ class TurbineDataResource(ModelResource):
         allowed_methods = ['get']
 
     def dehydrate(self, bundle):
-        bundle.data['status'] = "Whatever you want"
+        bundle.data['addon'] = "Whatever you want"
         return bundle

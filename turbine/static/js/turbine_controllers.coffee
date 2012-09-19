@@ -4,7 +4,8 @@ angular.module('turbine.controllers', ['turbine.services'])
     '$scope', 'Turbines', "$cookieStore"
 
     ($scope, Turbines, $cookieStore) ->
-        $scope.turbines = Members.query(
+        console.warn $cookieStore.get('username')
+        $scope.turbines = Turbines.query(
             username: $cookieStore.get('username')
             api_key:  $cookieStore.get('apikey')
         )

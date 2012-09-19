@@ -1,0 +1,7 @@
+settings_local.py
+*.bk
+*.pyc
+*.swp
+*.orig
+*.sql
+*~
