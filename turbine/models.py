@@ -40,9 +40,10 @@ class TurbineData(models.Model):
     turbine = models.ForeignKey(Turbine)
     status = models.BooleanField()
     currentpower = models.IntegerField(default=0)
+    windspeed = models.IntegerField(default=0)
     alarminfo = models.OneToOneField(TurbineAlarm, verbose_name='Alarm')
     state = models.OneToOneField(TurbineState, verbose_name='State')
-    currentdate = models.DateTimeField('date inserted', default=datetime.datetime.now)
+    currenttime = models.DateTimeField('date inserted', default=datetime.datetime.now)
 
     def __unicode__(self):
         return u'[Turbine Power:%d]' % self.currentpower

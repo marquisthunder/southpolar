@@ -1,7 +1,7 @@
 angular.module('turbine.services', [])
 #register RESTful services
 .factory "Turbines", ($resource) ->
-    $resource "/api/turbines/turbinedata/:turbineid",
+    $resource "/api/turbines/turbine/:turbineid",
         format: "json"
     ,
         query:

@@ -7,7 +7,6 @@ angular.module('member.controllers', ['member.services'])
             username: $cookieStore.get('username')
             api_key: $cookieStore.get('apikey')
         )
-        #console.log($scope.members);
 ])
 
 .controller("MemberDetailControl", [

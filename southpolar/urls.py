@@ -3,7 +3,7 @@ from member.resource import MemberResource
 from member.resource import UserResource
 from report.resource import ReportResource
 from portal.resource import PortalResource
-from turbine.resource import TurbineDataResource
+from turbine.resource import TurbineResource, TurbineDataResource
 from serviceconf.resource import ServiceConfResource
 from django.contrib import admin
 from tastypie.api import Api
@@ -15,6 +15,7 @@ members_api.register(MemberResource())
 members_api.register(PortalResource())
 
 turbines_api = Api(api_name='turbines')
+turbines_api.register(TurbineResource())
 turbines_api.register(TurbineDataResource())
 
 service_api = Api(api_name='service')

@@ -1,43 +1,43 @@
-<div class="container_12">
-  <div id="content">
-    <div class="form">
-      <h1>Login</h1>
-      <form name="loginForm">
-        <div class="control-group" ng-class="{error: loginForm.username.$invalid}">
-          <p><label>Name</label></p>
-          <p><input type="text" name="username" ng-model="member.username" required>
-          <span ng-show="loginForm.username.$error.required" class="help-inline">
-            Required</span>
-          </p>
-        </div>
+<div class="container">
+  <div class="hero-unit">
+    <div id="content">
+      <div class="form">
+        <h1>登录</h1>
+        <form name="loginForm">
+          <div class="control-group" ng-class="{error: loginForm.username.$invalid}">
+            <p><label>Name</label></p>
+            <p><input type="text" name="username" ng-model="member.username" required>
+            <span ng-show="loginForm.username.$error.required" class="help-inline">
+              Required</span>
+            </p>
+          </div>
 
-        <div class="control-group" ng-class="{error: loginForm.password.$invalid}">
-          <p><label>Password</label></p>
-          <p><input type="password" name="password" ng-model="member.password" required>
-          <span ng-show="loginForm.password.$error.required" class="help-inline">
-            Required</span>
-          </p>
-        </div>
+          <div class="control-group" ng-class="{error: loginForm.password.$invalid}">
+            <p><label>Password</label></p>
+            <p><input type="password" name="password" ng-model="member.password" required>
+            <span ng-show="loginForm.password.$error.required" class="help-inline">
+              Required</span>
+            </p>
+          </div>
 
-        <div class="control-group" ng-class="{error: loginForm.group.$invalid}">
-          <select ui-select2 ng-model="member.group" required>
-            <option value="">Pick a Group</option>
-            <option value="site">Site</option>
-            <option value="enterprise">Enterprise</option>
-            <option value="organization">Organization</option>
-          </select>
-          <span ng-show="loginForm.type.$error.required" class="help-inline">
-            Required</span>
-        </div>
+          <div class="control-group" ng-class="{error: loginForm.group.$invalid}">
+            <select ui-select2 ng-model="member.group" required>
+              <option value="">Pick a Group</option>
+              <option value="site">Site</option>
+              <option value="enterprise">Enterprise</option>
+              <option value="organization">Organization</option>
+            </select>
+            <span ng-show="loginForm.type.$error.required" class="help-inline">
+              Required</span>
+          </div>
 
-        <br></br>
-        <a ng-click="destroy()" class="btn">Cancel</a>
-        <button ng-click="login()" ng-disabled="isClean() || loginForm.$invalid"
-          class="btn ui-button-primary" ui-jq="button">Login</button>
-        <button ng-click="$log.warn(member.username)" ng-disabled="isClean() || loginForm.$invalid"
-          class="btn btn-primary">Test</button>
-      </form>
+          <br></br>
+          <a ng-click="destroy()" class="btn">Cancel</a>
+          <button ng-click="login()" ng-disabled="isClean() || loginForm.$invalid"
+            class="btn ui-button-primary" ui-jq="button">Login</button>
+        </form>
 
+      </div>
     </div>
   </div>
 </div>
