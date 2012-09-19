@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ad21afe-1cbd-48e3-99c7-9c18485893e4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/static/js/kaas.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/common/static/js/kaas.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/static/js/services.js" afterPath="$PROJECT_DIR$/common/static/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/templates/base.html" afterPath="$PROJECT_DIR$/common/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/templates/head.html" afterPath="$PROJECT_DIR$/common/templates/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/models.py" afterPath="$PROJECT_DIR$/member/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/static/js/portal_controllers.js" afterPath="$PROJECT_DIR$/portal/static/js/portal_controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/static/js/portal_directives.js" afterPath="$PROJECT_DIR$/portal/static/js/portal_directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/templates/index.html" afterPath="$PROJECT_DIR$/portal/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/models.py" afterPath="$PROJECT_DIR$/report/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serviceconf/models.py" afterPath="$PROJECT_DIR$/serviceconf/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/southpolar/settings.py" afterPath="$PROJECT_DIR$/southpolar/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/southpolar/wsgi.py" afterPath="$PROJECT_DIR$/southpolar/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/turbine/static/js/turbine_services.coffee" afterPath="$PROJECT_DIR$/turbine/static/js/turbine_services.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/turbine/templates/turbines.html" afterPath="$PROJECT_DIR$/turbine/templates/turbines.html" />
     </list>
     <ignored path="southpolar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,44 +23,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="portal_controllers.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portal/static/js/portal_controllers.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="52" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="portal_directives.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/portal/static/js/portal_directives.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.18836565">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portal/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/static/js/services.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -298,7 +250,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.fileTypes" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="recentsLimit" value="5" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -311,7 +263,10 @@
       </PyConsoleSettings>
     </option>
     <option name="myDjangoConsoleState">
-      <PyConsoleSettings />
+      <PyConsoleSettings>
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="southpolar" />
+      </PyConsoleSettings>
     </option>
   </component>
   <component name="RunManager" selected="Django server.southpolar">
@@ -444,13 +399,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25395682" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26258993" sideWeight="0.6706667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -518,6 +473,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/portal/static/js/portal_directives.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/report/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -573,30 +542,23 @@
         <state line="23" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.5593705" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/static/js/services.coffee">
+    <entry file="file://$PROJECT_DIR$/portal/static/js/portal_directives.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.18836565">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/portal/static/js/portal_controllers.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="52" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+        <state line="3" column="52" selection-start="153" selection-end="153" vertical-scroll-proportion="0.07063712">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portal/static/js/portal_directives.coffee">
+    <entry file="file://$PROJECT_DIR$/portal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.18836565">
+        <state line="3" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.07063712">
           <folding />
         </state>
       </provider>
