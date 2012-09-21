@@ -10,6 +10,7 @@ from tastypie.models import ApiKey
 
 
 class PortalResource(ModelResource):
+
     class Meta:
         allowed_methods = ['get', 'post']
         resource_name = 'portal'

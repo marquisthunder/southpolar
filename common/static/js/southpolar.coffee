@@ -31,6 +31,9 @@ southpolar.config [
         ).when("/turbine/:turbineid",
             templateUrl: "/turbine/get/"
             controller: "TurbineDetailControl"
+        ).when("/turbine/history/:turbineid",
+            templateUrl: "/turbine/history/"
+            controller: "TurbineHistoryControl"
         ).when("/solarcells",
             templateUrl: "/solarcell/"
             #controller: "SolarcellDetailControl"
@@ -65,6 +68,7 @@ southpolar.config [
             templateUrl: "/service/serviceconf/"
             controller: "LoginControl"
         ).otherwise redirectTo: "/"
+
 ]
 
 #angular-ui global config

@@ -1,5 +1,5 @@
 from django.db import models
-import datetime
+from django.utils.timezone import now
 
 
 class TurbineParameter(models.Model):
@@ -16,21 +16,21 @@ class Turbine(models.Model):
     producer = models.CharField(max_length=30, verbose_name='Producer')
     ratedpower = models.IntegerField(verbose_name='Rated Power')
     parameter = models.ForeignKey(TurbineParameter, verbose_name='Parameter')
-    date_installed = models.DateTimeField('date installed', default=datetime.datetime.now)
+    date_installed = models.DateTimeField('date installed', default=now)
 
     def __unicode__(self):
         return u'[Turbine:%s]' % self.name
 
 
 class TurbineAlarm(models.Model):
-    type = models.TextField(verbose_name=u'Alarm Type')
+    type = models.CharField(max_length=100, verbose_name=u'Alarm Type')
 
     def __unicode__(self):
         return u'[Turbine Alarm:%s]' % self.type
 
 
 class TurbineState(models.Model):
-    type = models.TextField(verbose_name=u'State Type')
+    type = models.CharField(max_length=100, verbose_name=u'State Type')
 
     def __unicode__(self):
         return u'[Turbine State:%s]' % self.type
@@ -39,11 +39,11 @@ class TurbineState(models.Model):
 class TurbineData(models.Model):
     turbine = models.ForeignKey(Turbine)
     status = models.BooleanField()
-    currentpower = models.IntegerField(default=0)
+    power = models.IntegerField(default=0)
     windspeed = models.IntegerField(default=0)
-    alarminfo = models.OneToOneField(TurbineAlarm, verbose_name='Alarm')
-    state = models.OneToOneField(TurbineState, verbose_name='State')
-    currenttime = models.DateTimeField('date inserted', default=datetime.datetime.now)
+    alarm = models.ForeignKey(TurbineAlarm, verbose_name='Alarm')
+    state = models.ForeignKey(TurbineState, verbose_name='State')
+    timestamp = models.DateTimeField('date inserted', default=now)
 
     def __unicode__(self):
-        return u'[Turbine Power:%d]' % self.currentpower
+        return u'[Turbine Power:%d]' % self.power

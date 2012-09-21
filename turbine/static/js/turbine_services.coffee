@@ -9,7 +9,7 @@ angular.module('turbine.services', [])
             params: {}
             isArray: false
 
-.factory "Turbines", ($resource) ->
+.factory "Turbine", ($resource) ->
     $resource "/api/turbines/turbine/:turbineid",
         format: "json"
     ,

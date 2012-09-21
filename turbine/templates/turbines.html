@@ -1,21 +1,17 @@
 <div class="container">
   <div class="hero-unit">
-    <div id="content">
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
           <ul>
             <li ng-repeat="turbine in turbines.objects">
-            ((turbine))
+              <img src="{{ STATIC_URL }}img/favicon32.ico">
+                <a>实时功率:</a><span>((turbine.data.power))kw</span>
+                <a>no:</a><span>((turbine.name))</span>
+                <a>风速:</a><span>((turbine.data.windspeed))m/s</span>
+              <p><a href="/#/turbine/((turbine.id))" class="btn">View details »</a></p>
             </li>
           </ul>
-          <img src="{{ STATIC_URL }}img/favicon32.ico">
-          <p>实时功率:10kw</p>
-          <p>((turbines))</p>
-          <p>风速:8m/s</p>
-          <p><a href="/#/turbine" class="btn">View details »</a></p>
         </div>
-      </div>
     </div>
-  </div>
 </div>
