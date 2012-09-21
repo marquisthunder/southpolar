@@ -5,6 +5,7 @@ from tastypie.resources import ModelResource
 from django.forms.models import model_to_dict
 from django.utils.timezone import now, timedelta
 from django.conf.urls import url
+from django.core import serializers
 import copy
 
 
@@ -63,9 +64,9 @@ class TurbineDataResource(ModelResource):
         ]
 
     def minutedata(self, request, **kwargs):
-        minutedata = TurbineData.objects.filter(currenttime__lt=now - timedelta(minutes=1))
-        return self.create_response(request, model_to_dict(minutedata))
+        minutedata = TurbineData.objects.filter(timestamp__gt=now() - timedelta(minutes=1))
+        return self.create_response(request, serializers.serialize("json", minutedata))
 
     def hourdata(self, request, **kwargs):
-        hourdata = TurbineData.objects.filter(currenttime__lt=now - timedelta(hours=1))
-        return self.create_response(request, model_to_dict(hourdata))
+        hourdata = TurbineData.objects.filter(timestamp__lt=now() - timedelta(hours=1))
+        return self.create_response(request, serializers.serialize("json", hourdata))

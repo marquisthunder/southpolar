@@ -8,7 +8,7 @@
     "$interpolateProvider", "$routeProvider", function($interpolateProvider, $routeProvider) {
       $interpolateProvider.startSymbol("((");
       $interpolateProvider.endSymbol("))");
-      return $routeProvider.when("/", {
+      $routeProvider.when("/", {
         templateUrl: "/members/",
         controller: "MembersControl"
       }).when("/member/:memberId", {
@@ -58,6 +58,7 @@
       }).otherwise({
         redirectTo: "/"
       });
+      return console.warn(jQuery('.dropdown-toggle').dropdown());
     }
   ]);
 
