@@ -7,6 +7,7 @@ from turbine.resource import TurbineResource, TurbineDataResource
 from serviceconf.resource import ServiceConfResource
 from django.contrib import admin
 from tastypie.api import Api
+from django.views.generic.base import TemplateView
 
 #api objects
 members_api = Api(api_name='members')
@@ -27,7 +28,7 @@ report_api.register(ReportResource())
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'^$', 'portal.views.home', name='home'),
+                       url(r'^$', TemplateView.as_view(template_name='index.jade')),
                        url(r'^api/', include(members_api.urls)),
                        url(r'^api/', include(service_api.urls)),
                        url(r'^api/', include(report_api.urls)),

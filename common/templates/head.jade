@@ -1,0 +1,36 @@
+html
+  body
+    .topbar
+      .fill
+        .container
+          a.brand(href='#') 南极中山站微网监控系统
+          ul.nav
+            li.active
+              a(href='#') 概览
+            li
+              a(href='/#/solarcells') 太阳能阵列
+            li
+              a(href='/#/turbines') 风力发电机组
+            li
+              a(href='/#/batteries') 备用电源
+            li
+              a(href='/#/meteors') 气象测量
+            li
+              a(href='#') 测控通信
+            li
+              a(href='/#/surveillance') 视频监视
+            li
+              a(href='/#/surveillance') 消防监控
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', ui-jq='dropdown')
+                | 用户管理
+                b.caret
+              ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
+                li
+                  a(href='/#/login') Login
+                li
+                  a(href='/#/register') Register
+                li
+                  a(href='/#/logout') Logout
+          form.pull-right(action='')
+    form.pull-right(action='')

@@ -1,0 +1,20 @@
+html
+  body
+    head
+      meta(http-equiv='Content-Type', content='text/html; charset=gb2312')
+    .container
+      .hero-unit
+        // Example row of columns
+        .row
+          .span4
+            ul
+              li(ng-repeat='turbine in turbines.objects')
+                img(src='/static/img/favicon32.ico')
+                a 实时功率:
+                span ((turbine.data.power))kw
+                a no:
+                span ((turbine.name))
+                a 风速:
+                span ((turbine.data.windspeed))m/s
+                p
+                  a.btn(href='/#/turbine/((turbine.id))') View details »

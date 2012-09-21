@@ -1,0 +1,29 @@
+html
+  body
+    .container_12
+      #content
+        .form
+          h1 Login htmlpage
+          form(name='loginForm')
+            .control-group(ng-class='{error: loginForm.username.$invalid}')
+              label Name
+              input(type='text', name='username', ng-model='member.username', required='required')
+              span.help-inline(ng-show='loginForm.username.$error.required')
+                | Required
+            .control-group(ng-class='{error: loginForm.password.$invalid}')
+              label Password
+              input(type='password', name='password', ng-model='member.password', required='required')
+              span.help-inline(ng-show='loginForm.password.$error.required')
+                | Required
+            .control-group(ng-class='{error: loginForm.type.$invalid}')
+              select(ui-select2='ui-select2', ng-model='member.type', required='required')
+                option(value='') Pick a number
+                option(value='site') Site
+                option(value='enterprise') Enterprise
+                option(value='organization') Organization
+              span.help-inline(ng-show='loginForm.type.$error.required')
+                | Required
+            br
+            a.btn(href='') Cancel
+            button(ng-click='login()', ng-disabled='isClean() || loginForm.$invalid', ui-jq='button') Login
+            button.btn.btn-primary(ng-click='$log.warn(member.username)', ng-disabled='isClean() || loginForm.$invalid') Test

@@ -1,0 +1,9 @@
+html
+  body
+    | {% extends "base.jade" %}
+    | {% block title %}南极中山站可再生能源微网监控系统{% endblock %}
+    | {% block head %}
+    | {% endblock %}
+    | {% block content %}
+    div(ng-view='ng-view')
+    | {% endblock %}

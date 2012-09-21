@@ -1,0 +1,17 @@
+html
+  body
+    .container
+      .hero-unit
+        // Example row of columns
+        .row
+          .span10
+            ul
+              .span4
+                img(src='/static/img/fans.gif')
+              .span4
+                a 实时功率:
+                span ((turbine.data.power))kw
+                a no:
+                span ((turbine.name))
+                a 风速:
+                span ((turbine.data.windspeed))m/s
