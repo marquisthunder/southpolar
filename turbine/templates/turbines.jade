@@ -7,14 +7,20 @@ html
         // Example row of columns
         .row
           .span4
-            ul
+            table
               li(ng-repeat='turbine in turbines.objects')
-                img(src='/static/img/favicon32.ico')
-                a 实时功率:
-                span ((turbine.data.power))kw
-                a no:
-                span ((turbine.name))
-                a 风速:
-                span ((turbine.data.windspeed))m/s
-                p
-                  a.btn(href='/#/turbine/((turbine.id))') View details »
+                td
+                  img(src='/static/img/favicon32.ico')
+                td
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
