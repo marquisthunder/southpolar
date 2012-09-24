@@ -24,19 +24,20 @@ angular.module('turbine.controllers', ['turbine.services'])
             )
             $timeout arguments.callee, 500
         , 500
-
 ])
 
-.controller("TurbineHistoryControl", [
-    "$scope", "$routeParams", "TurbineData", "$cookieStore"
+.controller("TurbineHourHistoryControl", [
+    "$scope", "$routeParams", "TurbineHourHistory", "$cookieStore", "$timeout"
 
-    ($scope, $routeParams, TurbineData, $cookieStore) ->
-        $scope.turbine = TurbineData.get(
-            datatype: $routeParams.datatype
-            turbineid: $routeParams.turbineid
-            username: $cookieStore.get('username')
-            api_key:  $cookieStore.get('apikey')
-        , (turbine) ->
-        )
-        $scope.turbine
+    ($scope, $routeParams, TurbineHourHistory, $cookieStore, $timeout) ->
+        $timeout ->
+            $scope.turbine = TurbineHourHistory.get(
+                #datatype: $routeParams.datatype
+                turbineid: $routeParams.turbineid
+                username: $cookieStore.get('username')
+                api_key:  $cookieStore.get('apikey')
+            , (turbine) ->
+            )
+            $timeout arguments.callee, 500
+        , 500
 ])

@@ -1,6 +1,7 @@
 southpolar = angular.module("southpolar",
     ["ngResource", "ngCookies", "ui", "portal.controllers",
-     "member.controllers", "turbine.controllers"])
+     "member.controllers", "turbine.controllers",
+     "turbine.directives"])
 southpolar.config [
     "$interpolateProvider", "$routeProvider"
 
@@ -30,10 +31,6 @@ southpolar.config [
             controller: "TurbinesControl"
         ).when("/turbine/:turbineid",
             templateUrl: "/turbine/get/"
-            controller: "TurbineDetailControl"
-        ).when("/turbine/history/:turbineid",
-            templateUrl: "/turbine/history/"
-            controller: "TurbineHistoryControl"
         ).when("/solarcells",
             templateUrl: "/solarcell/"
             #controller: "SolarcellDetailControl"

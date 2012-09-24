@@ -16,7 +16,6 @@ class PortalResource(ModelResource):
         resource_name = 'portal'
 
     def prepend_urls(self):
-        print 1343
         return [
             url(r"^(?P<resource_name>%s)/login/?$" % self._meta.resource_name,
                 self.wrap_view('login'), name="api_login"),
@@ -32,7 +31,6 @@ class PortalResource(ModelResource):
         self.method_check(request, allowed=['post'])
         data = self.deserialize(request, request.raw_post_data,
                                 format=request.META.get('CONTENT_TYPE', 'application/json'))
-        print data
         username = data.get('username', '')
         password = data.get('password', '')
         group = data.get('group', '')
@@ -69,14 +67,12 @@ class PortalResource(ModelResource):
             })
 
     def login(self, request, **kwargs):
-        print 1
         self.method_check(request, allowed=['post'])
         data = self.deserialize(request, request.raw_post_data,
                                 format=request.META.get('CONTENT_TYPE', 'application/json'))
 
         username = data.get('username', '')
         password = data.get('password', '')
-        print username, password
         user = authenticate(username=username, password=password)
         if user:
             if user.is_active:
