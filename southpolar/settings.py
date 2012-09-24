@@ -140,6 +140,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'tastypie',
+    'extendedmodelresource',
+    'tastypie_generic',
     'common',
     'portal',
     'member',
