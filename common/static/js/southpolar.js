@@ -27,11 +27,7 @@
         templateUrl: "/turbine/",
         controller: "TurbinesControl"
       }).when("/turbine/:turbineid", {
-        templateUrl: "/turbine/get/",
-        controller: "TurbineDetailControl"
-      }).when("/turbine/history/:turbineid", {
-        templateUrl: "/turbine/history/",
-        controller: "TurbineHistoryControl"
+        templateUrl: "/turbine/get/"
       }).when("/solarcells", {
         templateUrl: "/solarcell/"
       }).when("/solarcell/:solarcellid", {

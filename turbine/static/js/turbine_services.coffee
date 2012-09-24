@@ -1,6 +1,6 @@
 angular.module('turbine.services', [])
 #register RESTful services
-.factory "TurbineData", ($resource) ->
+.factory "Turbine", ($resource) ->
     $resource "/api/turbines/turbine/:turbineid",
         format: "json"
     ,
@@ -9,7 +9,7 @@ angular.module('turbine.services', [])
             params: {}
             isArray: false
 
-.factory "TurbineHistory", ($resource) ->
+.factory "TurbineHourHistory", ($resource) ->
     $resource "/api/turbines/turbinedata/:turbineid/hour",
         format: "json"
     ,
@@ -18,8 +18,8 @@ angular.module('turbine.services', [])
             params: {}
             isArray: false
 
-.factory "TurbinesHistory", ($resource) ->
-    $resource "/api/turbines/turbinedata",
+.factory "TurbineMinuteHistory", ($resource) ->
+    $resource "/api/turbines/turbinedata/:turbineid/minute",
         format: "json"
     ,
         query:

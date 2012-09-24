@@ -7,7 +7,7 @@ html
             ul
               .span4
                 img(src='/static/img/fans.gif')
-              .span4
+              .span4(ng-controller='TurbineDetailControl')
                 li 实时功率:
                 span ((turbine.data.power))kw
                 li no:
@@ -16,6 +16,5 @@ html
                 span ((turbine.data.windspeed))m/s
                 li state:
                 span ((turbine.data.state))
-                li powerChart
             p
-              a.btn(href='/#/turbine/history/((turbine.id))') View History
+              li(ng-controller='TurbineHourHistoryControl') powerChart((turbine))

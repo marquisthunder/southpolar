@@ -8,8 +8,8 @@
           username: $cookieStore.get('username'),
           api_key: $cookieStore.get('apikey')
         });
-        return $timeout(arguments.callee, 20000);
-      }, 20000);
+        return $timeout(arguments.callee, 2000);
+      }, 2000);
     }
   ]).controller("TurbineDetailControl", [
     '$scope', 'Turbine', '$routeParams', '$cookieStore', '$timeout', function($scope, Turbine, $routeParams, $cookieStore, $timeout) {
@@ -22,15 +22,16 @@
         return $timeout(arguments.callee, 500);
       }, 500);
     }
-  ]).controller("TurbineHistoryControl", [
-    "$scope", "$routeParams", "TurbineData", "$cookieStore", function($scope, $routeParams, TurbineData, $cookieStore) {
-      $scope.turbine = TurbineData.get({
-        datatype: $routeParams.datatype,
-        turbineid: $routeParams.turbineid,
-        username: $cookieStore.get('username'),
-        api_key: $cookieStore.get('apikey')
-      }, function(turbine) {});
-      return $scope.turbine;
+  ]).controller("TurbineHourHistoryControl", [
+    "$scope", "$routeParams", "TurbineHourHistory", "$cookieStore", "$timeout", function($scope, $routeParams, TurbineHourHistory, $cookieStore, $timeout) {
+      return $timeout(function() {
+        $scope.turbine = TurbineHourHistory.get({
+          turbineid: $routeParams.turbineid,
+          username: $cookieStore.get('username'),
+          api_key: $cookieStore.get('apikey')
+        }, function(turbine) {});
+        return $timeout(arguments.callee, 500);
+      }, 500);
     }
   ]);
 

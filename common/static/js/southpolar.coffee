@@ -31,10 +31,6 @@ southpolar.config [
             controller: "TurbinesControl"
         ).when("/turbine/:turbineid",
             templateUrl: "/turbine/get/"
-            controller: "TurbineDetailControl"
-        ).when("/turbine/history/:turbineid",
-            templateUrl: "/turbine/history/"
-            controller: "TurbineHistoryControl"
         ).when("/solarcells",
             templateUrl: "/solarcell/"
             #controller: "SolarcellDetailControl"
