@@ -9,21 +9,21 @@ html
       .row
         .span4
           h2 这里是风电模块
-          img(src='{{ STATIC_URL }}img/favicon32.ico', href='/#/turbine/get')
+          img(src='/static/img/favicon32.ico', href='/#/turbine/get')
           p 实时功率:10kw
           p 风速:8m/s
           p
             a.btn(href='/#/turbines') View details »
         .span4
           h2 这里是太阳能模块
-          img(src='{{ STATIC_URL }}img/solar.jpg', href='/#/solar/get')
+          img(src='/static/img/solar.jpg', href='/#/solar/get')
           p 实时功率:10kw
           p 朝向角:20&deg
           p
             a.btn(href='/#/solarcells') View details »
         .span4
           h2 这里是电池组模块
-          img(src='{{ STATIC_URL }}img/battery.jpg', href='/#/battery/get')
+          img(src='/static/img/battery.jpg', href='/#/battery/get')
           p
             a.btn(href='/#/batteries') View details »
     script

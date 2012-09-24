@@ -25,5 +25,4 @@ class MemberResource(ModelResource):
         allowed_methods = ['get', 'post']
 
     def dehydrate(self, bundle):
-        bundle.data['custom_field'] = "Whatever you want"
         return bundle

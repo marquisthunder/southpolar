@@ -5,8 +5,7 @@ from tastypie.resources import ModelResource
 from django.forms.models import model_to_dict
 from django.utils.timezone import now, timedelta
 from django.conf.urls import url
-from django.core import serializers
-import copy
+from tastypie.serializers import Serializer
 
 
 class TurbineParameterResource(ModelResource):
@@ -35,18 +34,16 @@ class TurbineResource(ModelResource):
 
     def dehydrate(self, bundle):
         parameter = Turbine.objects.get(id=bundle.data['id']).parameter
-        data = TurbineData.objects.filter(turbine=bundle.data['id']).latest('timestamp')
-        bundle.data['data'] = model_to_dict(data)
+        data = model_to_dict(TurbineData.objects.filter(turbine=bundle.data['id']).latest('timestamp'))
+        data['alarm'] = TurbineAlarm.objects.get(id=data['alarm']).type
+        data['state'] = TurbineState.objects.get(id=data['state']).type
+        bundle.data['data'] = data
         bundle.data['parameter'] = model_to_dict(parameter)
         return bundle
 
 
 class TurbineDataResource(ModelResource):
-    status = fields.BooleanField(default=False, attribute='status')
-    windspeed = fields.IntegerField(attribute='windspeed', null=True)
-    power = fields.IntegerField(attribute='power', null=True)
-    state = fields.CharField(attribute='state__type')
-    alarm = fields.CharField(attribute='alarm__type')
+    serializer = Serializer()
 
     class Meta:
         queryset = TurbineData.objects.all()
@@ -57,16 +54,29 @@ class TurbineDataResource(ModelResource):
             the response format as a file extension, e.g. /api/v1/users.json
         """
         return [
-            url(r"^(?P<resource_name>%s)/minute$" % self._meta.resource_name,
+            url(r"^(?P<resource_name>%s)/(?P<turbineid>[\d]+)/minute$" % self._meta.resource_name,
                 self.wrap_view('minutedata'), name="api_get_minutedata"),
-            url(r"^(?P<resource_name>%s)/hour$" % self._meta.resource_name,
+            url(r"^(?P<resource_name>%s)/(?P<turbineid>[\d]+)/hour$" % self._meta.resource_name,
                 self.wrap_view('hourdata'), name="api_get_hourdata"),
         ]
 
     def minutedata(self, request, **kwargs):
-        minutedata = TurbineData.objects.filter(timestamp__gt=now() - timedelta(minutes=1))
-        return self.create_response(request, serializers.serialize("json", minutedata))
+        id = kwargs['turbineid']
+        minutedata = TurbineData.objects.filter(turbine__id=id,
+                                                timestamp__gt=now() - timedelta(minutes=1))
+        data =  list(self.handledata(obj) for obj in minutedata)
+        return self.create_response(request, data)
 
     def hourdata(self, request, **kwargs):
-        hourdata = TurbineData.objects.filter(timestamp__lt=now() - timedelta(hours=1))
-        return self.create_response(request, serializers.serialize("json", hourdata))
+        id = kwargs['turbineid']
+        hourdata = TurbineData.objects.filter(turbine__id=id,
+                                              timestamp__gt=now() - timedelta(hours=1))
+        data = list(self.handledata(obj) for obj in hourdata)
+        return self.create_response(request, data)
+
+    def handledata(self, obj):
+        dict = model_to_dict(obj, exclude=['id']) 
+        dict['alarm'] = TurbineAlarm.objects.get(id=dict['alarm']).type
+        dict['state'] = TurbineState.objects.get(id=dict['state']).type
+        dict['turbine'] = Turbine.objects.get(id=dict['turbine']).name
+        return dict

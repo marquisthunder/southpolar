@@ -1,6 +1,7 @@
 southpolar = angular.module("southpolar",
     ["ngResource", "ngCookies", "ui", "portal.controllers",
-     "member.controllers", "turbine.controllers"])
+     "member.controllers", "turbine.controllers",
+     "turbine.directives"])
 southpolar.config [
     "$interpolateProvider", "$routeProvider"
 
