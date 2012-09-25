@@ -1,11 +1,21 @@
+
 html
   body
-    .span4
-      h2 这里是太阳能模块
-      img(src='/static/img/solar.jpg')
-      p 实时功率:10kw
-      p 朝向角:20
-      p
-        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn(href='#') View details »
+    .container
+      .hero-unit
+        .row
+          .span14
+            table
+              td: img(src='/static/img/solar_1.jpg')
+              td
+                ul
+                  li 实时功率:10kw
+                  li 朝向角:20
+                  li: a.btn(href='/#/solarcells') View details »
+
+              td: img(src='/static/img/solar_1.jpg')
+              td
+                ul
+                  li 实时功率:10kw
+                  li 朝向角:20
+                  li: a.btn(href='/#/solarcells') View details »

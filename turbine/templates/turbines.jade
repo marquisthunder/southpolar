@@ -6,12 +6,98 @@ html
       .hero-unit
         // Example row of columns
         .row
-          .span4
-            table
-              li(ng-repeat='turbine in turbines.objects')
+            table(style="border:2px solid blue;")
+                h2(style="text-align:center;"):风机组:1-3
                 td
-                  img(src='/static/img/favicon32.ico')
+                  img(src='/static/img/fan_1.jpg')
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
                 td
+                  img(src='/static/img/fan_1.jpg')
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
+                td
+                  img(src='/static/img/fan_1.jpg')
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
+
+
+            table(style="border:2px solid blue;")
+                h2(style="text-align:center;"):风机组:4-7
+                td
+                  img(src='/static/img/fan_1.jpg')
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
+                td
+                  img(src='/static/img/fan_1.jpg')
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
+                td
+                  img(src='/static/img/fan_1.jpg')
+                  ul
+                    li
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    li
+                      a No.:
+                      span ((turbine.name))
+                    li
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
+                    li
+                      a.btn(href='/#/turbine/((turbine.id))') View details »
+                td
+                  img(src='/static/img/fan_1.jpg')
                   ul
                     li
                       a 实时功率:
