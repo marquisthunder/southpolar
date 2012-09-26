@@ -1,5 +1,3 @@
-#from member.resource import UserResource
-#from tastypie import fields
 from django.contrib.auth.models import User
 from django.conf.urls import url
 from tastypie.resources import ModelResource
