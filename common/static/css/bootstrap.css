@@ -132,6 +132,8 @@ sub {
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 /*
@@ -195,6 +197,8 @@ body {
   width: 940px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 100px;
+  padding-right: 100px;
   zoom: 1;
 }
 .container:before, .container:after {
@@ -430,7 +434,7 @@ h1 small {
   font-size: 18px;
 }
 h2 {
-  font-size: 24px;
+  font-size: 26px;
   line-height: 36px;
 }
 h2 small {
@@ -478,7 +482,7 @@ ol {
   list-style: decimal;
 }
 li {
-  line-height: 18px;
+  line-height: 20px;
   color: #808080;
 }
 ul.unstyled {
@@ -1108,10 +1112,12 @@ textarea[readonly] {
  * ---------------------------------------- */
 table {
   width: 100%;
-  margin-bottom: 18px;
-  padding: 0;
-  font-size: 13px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 14px;
   border-collapse: collapse;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 table th, table td {
   padding: 10px 10px 9px;
@@ -1125,7 +1131,10 @@ table th {
 }
 table td {
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  margin: 2px 20px;
+  background-color: #add8e6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 table tbody th {
   border-top: 1px solid #ddd;
@@ -1774,11 +1783,11 @@ a.menu:after, .dropdown-toggle:after {
 }
 .hero-unit {
   background-color: #f5f5f5;
-  margin-bottom: 30px;
-  padding: 80px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  margin-bottom: 0px;
+  padding: 40px 40px 20px 60px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 }
 .hero-unit h1 {
   margin-bottom: 0;
@@ -1792,9 +1801,13 @@ a.menu:after, .dropdown-toggle:after {
   line-height: 27px;
 }
 footer {
-  margin-top: 17px;
-  padding-top: 17px;
-  border-top: 1px solid #eee;
+  width:940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border: 1px;
+  border-top: 0px;
+  background-color: #add8e6;
 }
 .page-header {
   margin-bottom: 17px;
@@ -2473,4 +2486,19 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+.container .hero-unit .row div{
+    float: left;
+    margin: 10px 10px;
+    background-color: #add8e6;;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.row div > p{
+    padding-left: 18px;
+    padding-top: 6px;
+    line-height: 1em;
+}
+footer{
+    clear: both;
 }
