@@ -16,7 +16,7 @@ angular.module('turbine.services', [])
         query:
             method: "GET"
             params: {}
-            isArray: false
+            isArray: true
 
 .factory "TurbineMinuteHistory", ($resource) ->
     $resource "/api/turbines/turbinedata/:turbineid/minute",

@@ -6,6 +6,7 @@ from django.forms.models import model_to_dict
 from django.utils.timezone import now, timedelta
 from django.conf.urls import url
 from tastypie.serializers import Serializer
+from time import mktime
 
 
 class TurbineParameterResource(ModelResource):
@@ -44,6 +45,9 @@ class TurbineResource(ModelResource):
 
 class TurbineDataResource(ModelResource):
     serializer = Serializer()
+    turbinelist = {turbine['id']: turbine['name'] for turbine in Turbine.objects.all().values()}
+    alarmlist = {alarm['id']: alarm['type'] for alarm in TurbineAlarm.objects.all().values()}
+    statelist = {state['id']: state['type'] for state in TurbineState.objects.all().values()}
 
     class Meta:
         queryset = TurbineData.objects.all()
@@ -76,7 +80,8 @@ class TurbineDataResource(ModelResource):
 
     def handledata(self, obj):
         dict = model_to_dict(obj, exclude=['id']) 
-        dict['alarm'] = TurbineAlarm.objects.get(id=dict['alarm']).type
-        dict['state'] = TurbineState.objects.get(id=dict['state']).type
-        dict['turbine'] = Turbine.objects.get(id=dict['turbine']).name
+        dict['alarm'] = self.alarmlist[dict['alarm']]
+        dict['state'] = self.statelist[dict['state']]
+        dict['timestamp'] = int(1000 * mktime(dict['timestamp'].timetuple()))
+        dict['turbine'] = self.turbinelist[dict['turbine']]
         return dict

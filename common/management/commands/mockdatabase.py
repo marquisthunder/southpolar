@@ -23,4 +23,4 @@ class Command(BaseCommand):
                                                      state=random.choice(states))
             dataadded += 1
             #self.stdout.write('"dataadded:%d"' % dataadded)
-            time.sleep(0.2)
+            time.sleep(1)

@@ -18,7 +18,7 @@
       query: {
         method: "GET",
         params: {},
-        isArray: false
+        isArray: true
       }
     });
   }).factory("TurbineMinuteHistory", function($resource) {
