@@ -1,112 +1,161 @@
 html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=gb2312')
   body
-    head
-      meta(http-equiv='Content-Type', content='text/html; charset=gb2312')
     .container
       .hero-unit
         // Example row of columns
         .row
-            table(style="border:2px solid blue;")
-                h2(style="text-align:center;"):风机组:1-3
+            h2(style="text-align:center"): 风能发电组
+            table
+                h3(style="text-align:center"): 风机组:1-3
                 td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
-                      a 实时功率:
-                      span ((turbine1.data.power))kw
-                    li
-                      a No.:
-                      span ((turbine1.name))
-                    li
-                      a 风速:
-                      span ((turbine1.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine1.id))') View details »
-                td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
                       a 实时功率:
                       span ((turbine.data.power))kw
-                    li
+                    p
                       a No.:
                       span ((turbine.name))
-                    li
+                    p
                       a 风速:
                       span ((turbine.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine.id))') View details »
                 td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
                       a 实时功率:
                       span ((turbine.data.power))kw
-                    li
+                    p
                       a No.:
                       span ((turbine.name))
-                    li
+                    p
                       a 风速:
                       span ((turbine.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine.id))') View details »
+                td
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
+                      a 实时功率:
+                      span ((turbine.data.power))kw
+                    p
+                      a No.:
+                      span ((turbine.name))
+                    p
+                      a 风速:
+                      span ((turbine.data.windspeed))m/s
 
-
-            table(style="border:2px solid blue;")
-                h2(style="text-align:center;"):风机组:4-7
-                td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
+                      a.btn(href='/#/') open
+                      a.btn(href='/#/') close
+                    p
                       a 实时功率:
                       span ((turbine.data.power))kw
-                    li
+                    p
                       a No.:
                       span ((turbine.name))
-                    li
+                    p
                       a 风速:
                       span ((turbine.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine.id))') View details »
-                td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
+                      a.btn(href='/#/') open
+                      a.btn(href='/#/') close
+                    p
                       a 实时功率:
                       span ((turbine.data.power))kw
-                    li
+                    p
                       a No.:
                       span ((turbine.name))
-                    li
+                    p
                       a 风速:
                       span ((turbine.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine.id))') View details »
-                td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
+                      a.btn(href='/#/') open
+                      a.btn(href='/#/') close
+                    p
                       a 实时功率:
                       span ((turbine.data.power))kw
-                    li
+                    p
                       a No.:
                       span ((turbine.name))
-                    li
+                    p
                       a 风速:
                       span ((turbine.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine.id))') View details »
-                td
-                  img(src='/static/img/fan_1.jpg')
-                  ul
-                    li
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                    img(src='/static/img/fan_1.jpg')
+                    p
+                      a.btn(href='/#/') open
+                      a.btn(href='/#/') close
+                    p
                       a 实时功率:
                       span ((turbine.data.power))kw
-                    li
+                    p
                       a No.:
                       span ((turbine.name))
-                    li
+                    p
                       a 风速:
                       span ((turbine.data.windspeed))m/s
-                    li
-                      a.btn(href='/#/turbine/((turbine.id))') View details »
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                  img(src='/static/img/fan_1.jpg', ui-jq="tooltip")
+                  p
+                    a.btn(href='/#/') open
+                    a.btn(href='/#/') close
+                  p
+                    a 实时功率:
+                    span ((turbine.data.power))kw
+                  p
+                    a No.:
+                    span ((turbine.name))
+                  p
+                    a 风速:
+                    span ((turbine.data.windspeed))m/s
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                  img(src='/static/img/fan_1.jpg')
+                  p
+                    a.btn(href='/#/') open
+                    a.btn(href='/#/') close
+                  p
+                    a 实时功率:
+                    span ((turbine.data.power))kw
+                  p
+                    a No.:
+                    span ((turbine.name))
+                  p
+                    a 风速:
+                    span ((turbine.data.windspeed))m/s
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                  img(src='/static/img/fan_1.jpg')
+                  p
+                    a.btn(href='/#/') open
+                    a.btn(href='/#/') close
+                  p
+                    a 实时功率:
+                    span ((turbine.data.power))kw
+                  p
+                    a No.:
+                    span ((turbine.name))
+                  p
+                    a 风速:
+                    span ((turbine.data.windspeed))m/s
+            div
+                  a(href='/#/turbine/((turbine.id))')
+                  img(src='/static/img/fan_1.jpg')
+                  p
+                    a.btn(href='/#/') &nbsp;&nbsp;&nbsp;to be built &nbsp;&nbsp;&nbsp;
+                  p: &nbsp;
+                  p: TO BE BUILT...
+                  p: &nbsp;
