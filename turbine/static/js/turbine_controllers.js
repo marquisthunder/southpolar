@@ -4,9 +4,22 @@
   angular.module('turbine.controllers', ['turbine.services']).controller("TurbinesControl", [
     '$scope', 'Turbine', '$cookieStore', '$timeout', function($scope, Turbine, $cookieStore, $timeout) {
       return $timeout(function() {
-        $scope.turbines = Turbine.query({
+        Turbine.query({
           username: $cookieStore.get('username'),
           api_key: $cookieStore.get('apikey')
+        }, function(turbines) {
+          var turbine, _i, _len, _ref, _results;
+          _ref = turbines.objects;
+          _results = [];
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            turbine = _ref[_i];
+            if (turbine.id === 1) {
+              _results.push($scope.turbine1 = turbine);
+            } else {
+              _results.push(void 0);
+            }
+          }
+          return _results;
         });
         return $timeout(arguments.callee, 2000);
       }, 2000);

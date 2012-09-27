@@ -68,7 +68,7 @@ class TurbineDataResource(ModelResource):
         id = kwargs['turbineid']
         minutedata = TurbineData.objects.filter(turbine__id=id,
                                                 timestamp__gt=now() - timedelta(minutes=1))
-        data =  list(self.handledata(obj) for obj in minutedata)
+        data = list(self.handledata(obj) for obj in minutedata)
         return self.create_response(request, data)
 
     def hourdata(self, request, **kwargs):

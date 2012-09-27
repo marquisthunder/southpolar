@@ -4,10 +4,13 @@ angular.module('turbine.controllers', ['turbine.services'])
 
     ($scope, Turbine, $cookieStore, $timeout) ->
         $timeout ->
-            $scope.turbines = Turbine.query(
+            Turbine.query (
                 username: $cookieStore.get('username')
                 api_key:  $cookieStore.get('apikey')
-            )
+            ), (turbines) ->
+                for turbine in turbines.objects
+                    if turbine.id is 1
+                        $scope.turbine1 = turbine
             $timeout arguments.callee, 2000
         , 2000
 ])
