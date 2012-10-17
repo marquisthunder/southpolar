@@ -18,11 +18,15 @@ angular.module('portal.controllers', ['portal.services'])
             Login.save(
                 username: $scope.member.username
                 password: $scope.member.password
-            , (apitoken) ->
-                $log.warn apitoken['apikey']
-                $cookieStore.put('username', apitoken['username'])
-                $cookieStore.put('apikey', apitoken['apikey'])
+            ,(payload) ->
+                console.warn payload
+                $cookieStore.put('username', payload['username'])
+                $cookieStore.put('apikey', ['apikey'])
                 $location.path '/'
+            , (response, responseheaders) ->
+                console.warn response
+                if response.status is 401
+                  alert('something wrong')
             )
 
         $scope.select2 = ""
@@ -38,6 +42,8 @@ angular.module('portal.controllers', ['portal.services'])
         , ->
             $cookieStore.remove('username')
             $cookieStore.remove('apikey')
+
+
         )
 ])
  

@@ -30,6 +30,10 @@ h2 {
     -moz-border-radius: 20px;
     border-radius: 20px;
 }
+.row {
+    zoom: 1;
+    margin-left: -20px;
+}
 table {
     width: 100%;
     margin-bottom: 10px;
@@ -42,16 +46,39 @@ table {
 }
 .container .hero-unit .row div{
     float: left;
-    margin: 3px 6px;
-    background-color: #adff2f;
+    margin: 10px 10px;
+    background-color: #d4d4d4;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
 }
 .row div > p{
     padding-left: 18px;
-    padding-top: 3px;
-    line-height: 1.2em;
+    padding-top: 6px;
+    line-height: 1em;
+}
+.container .hero-unit .row div:hover{
+    background-color: #BFBFBF;
+}
+footer {
+    width:940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 1px;
+    border-top: 0px;
+    background-color: #add8e6;
 }
 footer{
     clear: both;
+}
+footer p{
+    padding-top: 10px;
+    padding-bottom: 11px;
+    line-height: 19px;
+}
+.hero-unit #content div{
+    width: 260px;
+    border: 2px solid blue;
+    float: right;
+    margin-right: 10px;
 }

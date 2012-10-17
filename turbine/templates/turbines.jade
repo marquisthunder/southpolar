@@ -7,46 +7,8 @@ html
         // Example row of columns
         .row
             h2(style="text-align:center"): 风能发电组
-            table
-                h3(style="text-align:center"): 风机组:1-3
-                td
-                  a(href='/#/turbine/((turbine.id))')
-                    img(src='/static/img/fan_1.jpg')
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
-                td
-                  a(href='/#/turbine/((turbine.id))')
-                    img(src='/static/img/fan_1.jpg')
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
-                td
-                  a(href='/#/turbine/((turbine.id))')
-                    img(src='/static/img/fan_1.jpg')
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
 
-            div
+            div(ng-repeater="turbine in turbines")
                   a(href='/#/turbine/((turbine.id))')
                     img(src='/static/img/fan_1.jpg')
                     p
@@ -108,7 +70,7 @@ html
                       span ((turbine.data.windspeed))m/s
             div
                   a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/fan_1.jpg', ui-jq="tooltip")
+                  img(src='/static/img/fan_1.jpg')
                   p
                     a.btn(href='/#/') open
                     a.btn(href='/#/') close

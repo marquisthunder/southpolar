@@ -8,7 +8,7 @@ html
             form(name='loginForm')
               .control-group(ng-class='{error: loginForm.username.$invalid}')
                 p
-                  label 用户名
+                  label username
                 p
                   input(type='text', name='username', ng-model='member.username', required='required')
                   span.help-inline(ng-show='loginForm.username.$error.required')
@@ -20,14 +20,20 @@ html
                   input(type='password', name='password', ng-model='member.password', required='required')
                   span.help-inline(ng-show='loginForm.password.$error.required')
                     | Required
-              .control-group(ng-class='{error: loginForm.group.$invalid}')
-                select(ui-select2='ui-select2', ng-model='member.group', required='required')
-                  option(value='') Pick a Group
-                  option(value='site') Site
-                  option(value='enterprise') Enterprise
-                  option(value='organization') Organization
-                span.help-inline(ng-show='loginForm.type.$error.required')
-                  | Required
+              br
+              a.btn(ng-click='reset()') 取消
+              button.btn.ui-button-primary(ng-click='login()', ng-disabled='isClean() || loginForm.$invalid', ui-jq='button')
+                  | 登陆
+
+//              .control-group(ng-class='{error: loginForm.group.$invalid}')
+//                select(ui-select2='ui-select2', ng-model='member.group', required='required')
+//                  option(value='') Pick a Group
+//                  option(value='site') Site
+//                  option(value='enterprise') Enterprise
+//                  option(value='organization') Organization
+//                span.help-inline(ng-show='loginForm.type.$error.required')
+//                  | Required
               br
               a.btn(ng-click='destroy()') 取消
-              button.btn.ui-button-primary(ng-click='login()', ng-disabled='isClean() || loginForm.$invalid', ui-jq='button') 登陆
+              button.btn.ui-button-primary(ng-click='login()', ng-disabled='isClean() || loginForm.$invalid', ui-jq='button')
+                  | 登陆

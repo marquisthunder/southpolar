@@ -3,7 +3,7 @@ southpolar = angular.module("turbine.directives", ["turbine.controllers"])
 .directive("powerchart", [
     "$timeout"
 
-    () =>
+    () ->
         restrict: 'E',
         transclude: true,
         template: '<form id="side_panel">
@@ -67,6 +67,7 @@ southpolar = angular.module("turbine.directives", ["turbine.controllers"])
                     <div id="slider"></div>
                     </div>'
         link: (scope, elm, attrs) =>
+            palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } )
             graph = new Rickshaw.Graph({
                 element: angular.element('#chart'),
                 renderer: 'area',

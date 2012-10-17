@@ -70,6 +70,9 @@
                     </div>',
         link: function(scope, elm, attrs) {
           var annotator, controls, graph, highlighter, hoverDetail, legend, order, shelving, slider, smoother, ticksTreatment, xAxis, yAxis;
+          palette = new Rickshaw.Color.Palette({
+                scheme: 'classic9'
+            });
           graph = new Rickshaw.Graph({
             element: angular.element('#chart'),
             renderer: 'area',
