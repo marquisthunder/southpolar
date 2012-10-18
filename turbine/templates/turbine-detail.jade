@@ -4,17 +4,17 @@ html
       .hero-unit
         .row
           .span10
-            ul
-              .span4
-                img(src='/static/img/fans.gif')
-              .span4(ng-controller='TurbineDetailControl')
-                li 实时功率:
-                span ((turbine.data.power))kw
-                li no:
-                span ((turbine.name))
-                li 风速:
-                span ((turbine.data.windspeed))m/s
-                li state:
-                span ((turbine.data.state))
+            div(ng-controller='TurbineDetailControl')
+                .span4
+                  img(src='/static/img/fan_1.jpg')
+                p 实时功率:
+                  span ((turbine.data.power))kw
+                p no:
+                  span ((turbine.name))
+                p 风速:
+                  span ((turbine.data.windspeed))m/s
+                p state:
+                  span ((turbine.data.state))
+          .span12
             div(ng-controller='TurbineHourHistoryControl')
               powerchart

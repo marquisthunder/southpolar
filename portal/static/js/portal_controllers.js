@@ -19,7 +19,7 @@
                 }, function(payload) {
                     console.warn(payload);
                     $cookieStore.put('username', payload['username']);
-                    $cookieStore.put('apikey', ['apikey']);
+                    $cookieStore.put('apikey', payload['apikey']);
                     return $location.path('/');
                 }, function(response, responseheaders) {
                     console.warn(response);

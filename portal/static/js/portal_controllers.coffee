@@ -21,7 +21,7 @@ angular.module('portal.controllers', ['portal.services'])
             ,(payload) ->
                 console.warn payload
                 $cookieStore.put('username', payload['username'])
-                $cookieStore.put('apikey', ['apikey'])
+                $cookieStore.put('apikey', payload['apikey'])
                 $location.path '/'
             , (response, responseheaders) ->
                 console.warn response
