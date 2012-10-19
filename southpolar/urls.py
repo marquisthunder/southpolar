@@ -4,6 +4,7 @@ from member.resource import UserResource
 from report.resource import ReportResource
 from portal.resource import PortalResource
 from turbine.resource import TurbineResource, TurbineDataResource
+from solarcell.resource import SolarcellResource, SolarcellDataResource
 from serviceconf.resource import ServiceConfResource
 from django.contrib import admin
 from tastypie.api import Api
@@ -19,6 +20,10 @@ turbines_api = Api(api_name='turbines')
 turbines_api.register(TurbineResource())
 turbines_api.register(TurbineDataResource())
 
+solarcells_api = Api(api_name='solarcells')
+solarcells_api.register(SolarcellResource())
+solarcells_api.register(SolarcellDataResource())
+
 service_api = Api(api_name='service')
 service_api.register(ServiceConfResource())
 
@@ -33,6 +38,7 @@ urlpatterns = patterns('',
                        url(r'^api/', include(service_api.urls)),
                        url(r'^api/', include(report_api.urls)),
                        url(r'^api/', include(turbines_api.urls)),
+                       url(r'^api/', include(solarcells_api.urls)),
                        url(r'^members/', include('member.urls')),
                        url(r'^portal/', include('portal.urls')),
                        url(r'^service/', include('serviceconf.urls')),
