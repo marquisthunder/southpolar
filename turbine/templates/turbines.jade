@@ -4,73 +4,11 @@ html
   body
     .container
       .hero-unit
-        // Example row of columns
         .row
             h2(style="text-align:center"): 风能发电组
-
-            div(ng-repeater="turbine in turbines")
+            div(ng-repeat="turbine in turbines")
                   a(href='/#/turbine/((turbine.id))')
                     img(src='/static/img/fan_1.jpg')
-                    p
-                      a.btn(href='/#/') open
-                      a.btn(href='/#/') close
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                    img(src='/static/img/fan_1.jpg')
-                    p
-                      a.btn(href='/#/') open
-                      a.btn(href='/#/') close
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                    img(src='/static/img/fan_1.jpg')
-                    p
-                      a.btn(href='/#/') open
-                      a.btn(href='/#/') close
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                    img(src='/static/img/fan_1.jpg')
-                    p
-                      a.btn(href='/#/') open
-                      a.btn(href='/#/') close
-                    p
-                      a 实时功率:
-                      span ((turbine.data.power))kw
-                    p
-                      a No.:
-                      span ((turbine.name))
-                    p
-                      a 风速:
-                      span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/fan_1.jpg')
                   p
                     a.btn(href='/#/') open
                     a.btn(href='/#/') close
@@ -83,41 +21,3 @@ html
                   p
                     a 风速:
                     span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/fan_1.jpg')
-                  p
-                    a.btn(href='/#/') open
-                    a.btn(href='/#/') close
-                  p
-                    a 实时功率:
-                    span ((turbine.data.power))kw
-                  p
-                    a No.:
-                    span ((turbine.name))
-                  p
-                    a 风速:
-                    span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/fan_1.jpg')
-                  p
-                    a.btn(href='/#/') open
-                    a.btn(href='/#/') close
-                  p
-                    a 实时功率:
-                    span ((turbine.data.power))kw
-                  p
-                    a No.:
-                    span ((turbine.name))
-                  p
-                    a 风速:
-                    span ((turbine.data.windspeed))m/s
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/fan_1.jpg')
-                  p
-                    a.btn(href='/#/') &nbsp;&nbsp;&nbsp;to be built &nbsp;&nbsp;&nbsp;
-                  p: &nbsp;
-                  p: TO BE BUILT...
-                  p: &nbsp;

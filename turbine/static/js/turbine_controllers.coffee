@@ -8,9 +8,9 @@ angular.module('turbine.controllers', ['turbine.services'])
                 username: $cookieStore.get('username')
                 api_key:  $cookieStore.get('apikey')
             ), (turbines) ->
-                for turbine in turbines.objects
-                    if turbine.id is 1
-                        $scope.turbine1 = turbine
+                $scope.turbines = turbines.objects
+                console.warn $scope
+
             $timeout arguments.callee, 2000
         , 2000
 ])
@@ -25,8 +25,8 @@ angular.module('turbine.controllers', ['turbine.services'])
                 username: $cookieStore.get('username')
                 api_key:  $cookieStore.get('apikey')
             )
-            $timeout arguments.callee, 500
-        , 500
+            $timeout arguments.callee, 2000
+        , 2000
 ])
 
 .controller("TurbineHourHistoryControl", [

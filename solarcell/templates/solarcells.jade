@@ -5,59 +5,12 @@ html
       .hero-unit
         .row
             h2(style="text-align:center"): 太阳能电池组
-            table
-              td: img(src='/static/img/solar_1.jpg')
-              td
-                ul
-                  li 实时功率:10kw
-                  li 朝向角:20
-                  li: a.btn(href='/#/solarcells') View details »
-
-              td: img(src='/static/img/solar_1.jpg')
-              td
-                ul
-                  li 实时功率:10kw
-                  li 朝向角:20
-                  li: a.btn(href='/#/solarcells') View details »
-
-
-            div
+            div(ng-repeat="solarcell in solarcells")
                   a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/solar_1.jpg')
+                    img(src='/static/img/solar_1.jpg')
                   p
                     a.btn(href='/#/') open
                     a.btn(href='/#/') close
-                  p: 实时功率:10kw
-                  p: 朝向角:20
-                  p
-                    a.btn(href='/#/solarcells') View details »
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/solar_1.jpg')
-                  p
-                    a.btn(href='/#/') open
-                    a.btn(href='/#/') close
-                  p: 实时功率:10kw
-                  p: 朝向角:20
-                  p
-                    a.btn(href='/#/solarcells') View details »
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/solar_1.jpg')
-                  p
-                    a.btn(href='/#/') open
-                    a.btn(href='/#/') close
-                  p: 实时功率:10kw
-                  p: 朝向角:20
-                  p
-                    a.btn(href='/#/solarcells') View details »
-            div
-                  a(href='/#/turbine/((turbine.id))')
-                  img(src='/static/img/solar_1.jpg')
-                  p
-                    a.btn(href='/#/') open
-                    a.btn(href='/#/') close
-                  p: 实时功率:10kw
-                  p: 朝向角:20
+                  p: 实时功率:((turbine.data.power))kw
                   p
                     a.btn(href='/#/solarcells') View details »
